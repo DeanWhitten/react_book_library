@@ -5,16 +5,16 @@ const Book = ({title, author, pages, book, setBook}) => {
     // events 
     const deleteHandler = () =>{
         ///this needs to be fixed the filter is removing ALL books?
-        setBook(book.filter((el) => el.key !== book.id ));
-
+        setBook(Object.values(book).filter( (el) => el.book !== book.book) );
+        
     };
 
     return(
-        <div className="book-container" id={book.key}>
-            <li className="book-item">
-                <h4>{title}</h4>
-                <h6>{author}</h6>
-                <p>{pages}</p>
+        <div className="book-container" key ={book.key}>
+            <li className="book-item" key ={book.key}>
+                {title}
+                {author}
+                {pages}
                 <button className="read-btn">Read</button>
                 <button onClick={deleteHandler} className="delete-btn">Delete</button>
             </li>
