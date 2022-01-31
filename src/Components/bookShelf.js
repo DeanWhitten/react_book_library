@@ -2,19 +2,16 @@ import React from "react";
 //Import components
 import Book from "./book.js"
 
-const BookShelf = ({book, setBook}) => {
+const BookShelf = ({books, setBooks}) => {
     return(
          <div className="book-shelf-container">
              <ul className="book-shelf">
-                 {book.map((book) =>(
+                 {books.map((book) =>(
                     <Book 
-                        book={book} 
-                        setBook={setBook} 
-                        key={book.id} 
-                        title={book.title} 
-                        author={book.author} 
-                        pages={book.pages} 
-                        id={book.id}
+                        book={book}
+                        books={books} 
+                        setBooks={setBooks} 
+                        key={book.id}
                     />
                  ))}
              </ul>

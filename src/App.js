@@ -8,7 +8,7 @@ function App() {
   const [inputTitle, setInputTitle] = useState("");
   const [inputAuthor, setInputAuthor] = useState("");
   const [inputPages, setInputPages] = useState("");
-  const [book, setBook] = useState([]);
+  const [books, setBooks] = useState([]);
 
 
   return (
@@ -23,10 +23,10 @@ function App() {
         setInputTitle={setInputTitle} 
         setInputAuthor={setInputAuthor} 
         setInputPages={setInputPages}
-        book={book}
-        setBook={setBook}
+        books={books}
+        setBooks={setBooks}
       />
-      <BookShelf book={book} setBook={setBook}/>
+      <BookShelf books={books} setBooks={setBooks}/>
     </div>
   );
 }
