@@ -3,9 +3,9 @@ import React from "react";
 
 const Book = ({title, author, pages, book, setBook}) => {
     // events 
-    const deleteHandler = () =>{\
+    const deleteHandler = () =>{
         ///this needs to be fixed the filter is removing ALL books?
-        book(Object.values(book)((el) => el.key !== book.key ));
+        setBook(book.filter((el) => el.key !== book.id ));
 
     };
 
