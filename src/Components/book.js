@@ -18,12 +18,17 @@ const Book = ({books, setBooks, book}) => {
 
     return(
         <div className="book">
-            <li className={`book-item ${book.read ? "read" : ''}`} >
-                <h5>{book.title}</h5>
-                <h6>{book.author}</h6>
-                <p>{book.pages}</p>
-                <button onClick={readHandler}className="read-btn">Read</button>
-                <button onClick={deleteHandler} className="delete-btn">Delete</button>
+            <li className={"book-list-item"} >
+                <span className={`book-item-${book.read ? "read" : ''}`}>
+                  <h5>{book.title}</h5>
+                    <h6>{book.author}</h6>
+                    <p>{book.pages} pages</p>  
+                </span>
+                <span className="book-btns">
+                 <button onClick={readHandler}className="read-btn">Read</button>
+                 <button onClick={deleteHandler} className="delete-btn">Delete</button>   
+                </span>
+                
             </li>
             
         </div>

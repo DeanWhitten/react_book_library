@@ -7,19 +7,43 @@
 
 h1{
     text-align: center;
+    padding: 5%;
 }
 
 form{
+    background-color: rgb(151, 142, 60);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
+.add-book-btn{
+    height: fit-content;
+    width: 50px;
+    border-radius: 20px;
+    border-style: solid;
+}
 
+input{
+    margin: 2%;
+    border-radius: 5px;
+    border-style: solid;
+}
+ 
+span{
+    display: flex;
+    padding: 2%;
+    align-items: center;
+}
 
-
-
-
+select{
+    border-radius: 20px;
+    border-style: solid;
+}
+select > option {
+    background-color: rgba(165, 42, 42, 0.082);
+ }
 
 
 
@@ -32,15 +56,50 @@ form{
 }
 
 ul{
-    
     list-style: none;
 }
 
 li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     border-style: solid;
     border-color: black;
-    height: 150px;
-    width: 150px;
-    margin: 50px;
-    padding: 10%;
+    border-radius: 5px;
+    height: 250px;
+    width: 250px;
+    margin: 25px;
+    padding: 5%;
+}
+
+h5, h6, p{
+    padding-bottom: 10%;
+    margin-top: %;
+}
+
+
+
+.book-item-{
+    display: flex;
+    flex-direction: column;
+}
+
+.book-item-read{
+    display: flex;
+    flex-direction: column;
+    text-decoration: line-through;
+}
+
+.book-btns{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.read-btn, .delete-btn{
+    width: 75%;
+    margin-top: 5%;
+    border-radius: 5px;
+    border-style: solid;
 }

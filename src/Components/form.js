@@ -26,20 +26,34 @@ const Form = ({ inputTitle, inputAuthor, inputPages, setInputTitle, setInputAuth
 
     return(
         <form>
-            Title:
-            <input value={inputTitle} onChange={titleInputHandler} type="text" className="title-input" />
-            Author:
-            <input value={inputAuthor} onChange={authorInputHandler} type="text" className="author-input" />
-            Number of Pages:
-            <input value={inputPages} onChange={pagesInputHandler} type="number" className="pages-input" />
-            <button onClick={submitBookHandler} className="add-book-btn" type="submit">+</button>
-            <div className="select">
-                <select onClick={statusHandler} name="book_status_filter" className="books-filter">
-                    <option value="all">All</option>
-                    <option value="read">Read</option>
-                    <option value="unread">UnRead</option>
-                </select>
-            </div>
+            <span>
+                Title:
+                <input value={inputTitle} onChange={titleInputHandler} type="text" className="title-input" />
+            </span>
+
+            <span>
+                Author:
+                <input value={inputAuthor} onChange={authorInputHandler} type="text" className="author-input" />
+            </span>
+
+            <span>
+                Pages:
+                <input value={inputPages} onChange={pagesInputHandler} type="number" className="pages-input" />
+            </span>
+            
+            <span>
+                <button onClick={submitBookHandler} className="add-book-btn" type="submit">+</button>
+            </span>
+
+            <span>
+                <div className="select">
+                    <select onClick={statusHandler} name="book_status_filter" className="books-filter">
+                        <option value="all">All</option>
+                        <option value="read">Read</option>
+                        <option value="unread">UnRead</option>
+                    </select>
+                </div>
+            </span>
 
         </form>
     );
