@@ -3,3 +3,44 @@
     margin: 0;
     padding: 0;
 }
+
+
+h1{
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.book-shelf{
+    background-color: aquamarine;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul{
+    
+    list-style: none;
+}
+
+li{
+    border-style: solid;
+    border-color: black;
+    height: 150px;
+    width: 150px;
+    margin: 50px;
+    padding: 10%;
+}
