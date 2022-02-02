@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ inputTitle, inputAuthor, inputPages, setInputTitle, setInputAuthor, setInputPages, books, setBooks}) => {
+const Form = ({ inputTitle, inputAuthor, inputPages, setInputTitle, setInputAuthor, setInputPages, books, setBooks, setStatus}) => {
     // events handlers
     const titleInputHandler = (e) =>{
         setInputTitle(e.target.value);
@@ -20,6 +20,9 @@ const Form = ({ inputTitle, inputAuthor, inputPages, setInputTitle, setInputAuth
         setInputAuthor(""); 
         setInputPages("");
     };
+    const statusHandler = (e) =>{
+        setStatus(e.target.value);
+    }
 
     return(
         <form>
@@ -31,7 +34,7 @@ const Form = ({ inputTitle, inputAuthor, inputPages, setInputTitle, setInputAuth
             <input value={inputPages} onChange={pagesInputHandler} type="number" className="pages-input" />
             <button onClick={submitBookHandler} className="add-book-btn" type="submit">+</button>
             <div className="select">
-                <select name="book_status_filter" className="books-filter">
+                <select onClick={statusHandler} name="book_status_filter" className="books-filter">
                     <option value="all">All</option>
                     <option value="read">Read</option>
                     <option value="unread">UnRead</option>
