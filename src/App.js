@@ -22,7 +22,9 @@ function App() {
    useEffect( () => {
     filterHandler();
     saveLocalBooks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [books, status]);
+
   //functions
   const filterHandler = () =>{
     switch(status){
