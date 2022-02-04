@@ -18,7 +18,7 @@ const Book = ({books, setBooks, book}) => {
 
     return(
         <div className="book">
-            <li className={"book-list-item"} >
+            <li className={`book-container-${book.read ? "read" : ''}`} >
                 <span className={`book-item-${book.read ? "read" : ''}`}>
                   <h5>{book.title}</h5>
                     <h6>{book.author}</h6>

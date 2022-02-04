@@ -44,7 +44,7 @@ const Form = ({ inputTitle, inputAuthor, inputPages, setInputTitle, setInputAuth
             <span>
                 <button onClick={submitBookHandler} className="add-book-btn" type="submit">+</button>
             </span>
-
+<br/>
             <span>
                 <div className="select">
                     <select onClick={statusHandler} name="book_status_filter" className="books-filter">
